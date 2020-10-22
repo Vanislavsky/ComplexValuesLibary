@@ -1,30 +1,23 @@
-//
-//   rational.h
-//  ComplexLibary
-//
-//  Created by Сергей Ваниславский on 15.10.2020.
-//
-
 #ifndef _rational_h
 #define _rational_h
+
 #include <string>
 #include <iostream>
 #include <algorithm>
 #include <math.h>
 
-using namespace std;
+unsigned int GCD(unsigned long long u, unsigned long long v);
+
 class rational {
 private:
     long long numerator;
     long long denominator;
 public:
-    unsigned int GCD(unsigned long long u, unsigned long long v) {
-        while ( v != 0) {
-            unsigned long long r = u % v;
-            u = v;
-            v = r;
-        }
-        return u;
+
+
+    rational() {
+        numerator = 0;
+        denominator = 1;
     }
 
     rational(long long num, long long den) {
@@ -58,7 +51,7 @@ public:
     rational(int num): numerator{num}, denominator{1} {}
 
     rational(double value) {
-        string  str_num = to_string(value);
+        std::string  str_num = std::to_string(value);
         size_t pos = str_num.find('.');
         int number_digits = str_num.size() - 1 - pos;
         double num = value * pow(10, number_digits);
@@ -86,7 +79,7 @@ public:
     }
 
     rational& operator= (double value) {
-        string  str_num = to_string(value);
+        std::string  str_num = std::to_string(value);
         size_t pos = str_num.find('.');
         int number_digits = str_num.size() - 1 - pos;
         double num = value * pow(10, number_digits);
@@ -148,7 +141,7 @@ public:
         return {numerator, denominator * value};
     }
 
-    bool operator==(rational& other) {
+    bool operator==(rational other) {
         if(numerator == other.numerator && denominator == other.denominator)
             return true;
         else
@@ -166,6 +159,15 @@ std::ostream& operator<< (std::ostream &out, const rational &value) {
     else
         out << value.numerator;
     return out;
+}
+
+unsigned int GCD(unsigned long long u, unsigned long long v) {
+    while ( v != 0) {
+        unsigned long long r = u % v;
+        u = v;
+        v = r;
+    }
+    return u;
 }
 
 rational abs(rational value) {

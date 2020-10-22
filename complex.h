@@ -9,6 +9,11 @@ private:
     rational imaginary_part;
 
 public:
+    complex() {
+        real_part = 0;
+        imaginary_part = 0;
+    }
+
     complex(rational real_part, rational imaginary_part): real_part{real_part}, imaginary_part{imaginary_part} {}
 
     complex(double value): real_part(value), imaginary_part(0) {}
@@ -36,6 +41,12 @@ public:
     complex& operator=(complex& other) {
         real_part = other.real_part;
         imaginary_part = other.imaginary_part;
+        return *this;
+    }
+
+    complex& operator=(int value) {
+        real_part = value;
+        imaginary_part = 0;
         return *this;
     }
 
@@ -84,8 +95,8 @@ public:
     }
 
     complex operator/(complex& other) {
-        auto r_part = (real_part * other.real_part + imaginary_part * other.imaginary_part) / (other.real_part * other.real_part + other.imaginary_part * other.imaginary_part);
-        auto im_part = (other.real_part * imaginary_part - other.imaginary_part * real_part) / (other.real_part * other.real_part + other.imaginary_part * other.imaginary_part);
+        rational r_part = (real_part * other.real_part + imaginary_part * other.imaginary_part) / (other.real_part * other.real_part + other.imaginary_part * other.imaginary_part);
+        rational im_part = (other.real_part * imaginary_part - other.imaginary_part * real_part) / (other.real_part * other.real_part + other.imaginary_part * other.imaginary_part);
         return {r_part, im_part};
     }
 
@@ -116,8 +127,10 @@ public:
     }
 
     complex& operator*=(complex& other) {
-        real_part = real_part * other.real_part + imaginary_part * other.imaginary_part * -1;
-        imaginary_part = imaginary_part * other.real_part + real_part * other.imaginary_part;
+        rational r_part = real_part * other.real_part + imaginary_part * other.imaginary_part * -1;
+        rational im_part = imaginary_part * other.real_part + real_part * other.imaginary_part;
+        real_part = r_part;
+        imaginary_part = im_part;
         return *this;
     }
 
@@ -128,8 +141,10 @@ public:
     }
 
     complex& operator/=(complex& other) {
-        real_part = (real_part * other.real_part + imaginary_part * other.imaginary_part) / (other.real_part * other.real_part + other.imaginary_part * other.imaginary_part);
-        imaginary_part = (other.real_part * imaginary_part - other.imaginary_part * real_part) / (other.real_part * other.real_part + other.imaginary_part * other.imaginary_part);
+        rational r_part = (real_part * other.real_part + imaginary_part * other.imaginary_part) / (other.real_part * other.real_part + other.imaginary_part * other.imaginary_part);
+        rational im_part = (other.real_part * imaginary_part - other.imaginary_part * real_part) / (other.real_part * other.real_part + other.imaginary_part * other.imaginary_part);
+        real_part = r_part;
+        imaginary_part = im_part;
         return *this;
     }
 
@@ -139,7 +154,7 @@ public:
         return *this;
     }
 
-    bool operator==(complex& other) {
+    bool operator==(complex other) {
         if(real_part == other.real_part && imaginary_part == other.imaginary_part)
             return true;
         else
