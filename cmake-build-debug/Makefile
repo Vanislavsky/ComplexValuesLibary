@@ -241,6 +241,33 @@ gtest/fast:
 	$(MAKE) $(MAKESILENT) -f lib/googletest-release-1.10.0/googletest/CMakeFiles/gtest.dir/build.make lib/googletest-release-1.10.0/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
+complex.o: complex.cpp.o
+
+.PHONY : complex.o
+
+# target to build an object file
+complex.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/complex.cpp.o
+.PHONY : complex.cpp.o
+
+complex.i: complex.cpp.i
+
+.PHONY : complex.i
+
+# target to preprocess a source file
+complex.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/complex.cpp.i
+.PHONY : complex.cpp.i
+
+complex.s: complex.cpp.s
+
+.PHONY : complex.s
+
+# target to generate assembly for a file
+complex.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/complex.cpp.s
+.PHONY : complex.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -267,6 +294,33 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+rational.o: rational.cpp.o
+
+.PHONY : rational.o
+
+# target to build an object file
+rational.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/rational.cpp.o
+.PHONY : rational.cpp.o
+
+rational.i: rational.cpp.i
+
+.PHONY : rational.i
+
+# target to preprocess a source file
+rational.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/rational.cpp.i
+.PHONY : rational.cpp.i
+
+rational.s: rational.cpp.s
+
+.PHONY : rational.s
+
+# target to generate assembly for a file
+rational.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/rational.cpp.s
+.PHONY : rational.cpp.s
 
 test.o: test.cpp.o
 
@@ -312,9 +366,15 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... untitled1"
+	@echo "... complex.o"
+	@echo "... complex.i"
+	@echo "... complex.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... rational.o"
+	@echo "... rational.i"
+	@echo "... rational.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"

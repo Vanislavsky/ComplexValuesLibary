@@ -321,6 +321,9 @@
 		<Unit filename="/Users/sergejvanislavskij/CLionProjects/untitled1/Tests/ClassName.h">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="/Users/sergejvanislavskij/CLionProjects/untitled1/complex.cpp">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="/Users/sergejvanislavskij/CLionProjects/untitled1/complex.h">
 			<Option target="untitled1"/>
 		</Unit>
@@ -339,10 +342,16 @@
 		<Unit filename="/Users/sergejvanislavskij/CLionProjects/untitled1/main.cpp">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="/Users/sergejvanislavskij/CLionProjects/untitled1/rational.cpp">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="/Users/sergejvanislavskij/CLionProjects/untitled1/rational.h">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="/Users/sergejvanislavskij/CLionProjects/untitled1/test.cpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/Users/sergejvanislavskij/CLionProjects/untitled1/test.h">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="/Users/sergejvanislavskij/CLionProjects/untitled1/CMakeLists.txt">

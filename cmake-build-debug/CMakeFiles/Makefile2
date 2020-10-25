@@ -157,12 +157,12 @@ CMakeFiles/untitled1.dir/all: lib/googletest-release-1.10.0/googletest/CMakeFile
 CMakeFiles/untitled1.dir/all: lib/googletest-release-1.10.0/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/sergejvanislavskij/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=9,10,11 "Built target untitled1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/sergejvanislavskij/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=9,10,11,12,13 "Built target untitled1"
 .PHONY : CMakeFiles/untitled1.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/untitled1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sergejvanislavskij/CLionProjects/untitled1/cmake-build-debug/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sergejvanislavskij/CLionProjects/untitled1/cmake-build-debug/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/untitled1.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sergejvanislavskij/CLionProjects/untitled1/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/untitled1.dir/rule
@@ -208,8 +208,8 @@ lib/googletest-release-1.10.0/googlemock/CMakeFiles/gmock.dir/clean:
 # Target rules for target lib/googletest-release-1.10.0/googlemock/CMakeFiles/gmock_main.dir
 
 # All Build rule for target.
-lib/googletest-release-1.10.0/googlemock/CMakeFiles/gmock_main.dir/all: lib/googletest-release-1.10.0/googlemock/CMakeFiles/gmock.dir/all
 lib/googletest-release-1.10.0/googlemock/CMakeFiles/gmock_main.dir/all: lib/googletest-release-1.10.0/googletest/CMakeFiles/gtest.dir/all
+lib/googletest-release-1.10.0/googlemock/CMakeFiles/gmock_main.dir/all: lib/googletest-release-1.10.0/googlemock/CMakeFiles/gmock.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/googletest-release-1.10.0/googlemock/CMakeFiles/gmock_main.dir/build.make lib/googletest-release-1.10.0/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/googletest-release-1.10.0/googlemock/CMakeFiles/gmock_main.dir/build.make lib/googletest-release-1.10.0/googlemock/CMakeFiles/gmock_main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/sergejvanislavskij/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target gmock_main"
