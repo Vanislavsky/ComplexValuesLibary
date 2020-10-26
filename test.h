@@ -127,9 +127,6 @@ TEST (ComplexValueTest, Mult) {
     }
 }
 
-TEST (ComplexValueTest, MultRatValues) {
-
-}
 
 TEST (ComplexValueTest, MultInt) {
     {
@@ -142,6 +139,23 @@ TEST (ComplexValueTest, MultInt) {
         complex a(2, 3);
         a *= 2;
         complex c(4, 6);
+        ASSERT_TRUE(a == c);
+    }
+}
+
+TEST (ComplexValueTest, MultRatValues) {
+    {
+        complex a(5.7, 3.889);
+        complex b(1.12, 4.17);
+        complex c(rational(-983313, 100000), rational(703117, 25000));
+        ASSERT_TRUE((a * b) == c);
+    }
+
+    {
+        complex a(5.7, 3.889);
+        complex b(1.12, 4.17);
+        a *= b;
+        complex c(rational(-983313, 100000), rational(703117, 25000));
         ASSERT_TRUE(a == c);
     }
 }
@@ -178,6 +192,23 @@ TEST (ComplexValueTest, DivInt) {
     }
 }
 
+TEST (ComplexValueTest, DivRatValues) {
+    {
+        complex a(5.2, 3.8);
+        complex b(1.2, 4.7);
+        complex c(rational(2410, 2353), rational(-1988, 2353));
+        ASSERT_TRUE((a / b) == c);
+    }
+
+    {
+        complex a(5.2, 3.8);
+        complex b(1.2, 4.7);
+        a /= b;
+        complex c(rational(2410, 2353), rational(-1988, 2353));
+        ASSERT_TRUE(a == c);
+    }
+}
+
 TEST (ComplexValueTest, Assigment) {
     {
         complex a;
@@ -199,7 +230,7 @@ TEST (ComplexValueTest, Inequality) {
         complex a;
         a = 3;
         complex b;
-        b = (long long)9299111324365555555;
+        b = (long long)929914365555555;
         ASSERT_FALSE(a == b);
     }
 }

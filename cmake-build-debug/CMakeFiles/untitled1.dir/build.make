@@ -90,22 +90,9 @@ CMakeFiles/untitled1.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/main.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sergejvanislavskij/CLionProjects/untitled1/main.cpp -o CMakeFiles/untitled1.dir/main.cpp.s
 
-CMakeFiles/untitled1.dir/test.cpp.o: CMakeFiles/untitled1.dir/flags.make
-CMakeFiles/untitled1.dir/test.cpp.o: ../test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sergejvanislavskij/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/untitled1.dir/test.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled1.dir/test.cpp.o -c /Users/sergejvanislavskij/CLionProjects/untitled1/test.cpp
-
-CMakeFiles/untitled1.dir/test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled1.dir/test.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sergejvanislavskij/CLionProjects/untitled1/test.cpp > CMakeFiles/untitled1.dir/test.cpp.i
-
-CMakeFiles/untitled1.dir/test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/test.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sergejvanislavskij/CLionProjects/untitled1/test.cpp -o CMakeFiles/untitled1.dir/test.cpp.s
-
 CMakeFiles/untitled1.dir/rational.cpp.o: CMakeFiles/untitled1.dir/flags.make
 CMakeFiles/untitled1.dir/rational.cpp.o: ../rational.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sergejvanislavskij/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/untitled1.dir/rational.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sergejvanislavskij/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/untitled1.dir/rational.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled1.dir/rational.cpp.o -c /Users/sergejvanislavskij/CLionProjects/untitled1/rational.cpp
 
 CMakeFiles/untitled1.dir/rational.cpp.i: cmake_force
@@ -118,7 +105,7 @@ CMakeFiles/untitled1.dir/rational.cpp.s: cmake_force
 
 CMakeFiles/untitled1.dir/complex.cpp.o: CMakeFiles/untitled1.dir/flags.make
 CMakeFiles/untitled1.dir/complex.cpp.o: ../complex.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sergejvanislavskij/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/untitled1.dir/complex.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sergejvanislavskij/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/untitled1.dir/complex.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled1.dir/complex.cpp.o -c /Users/sergejvanislavskij/CLionProjects/untitled1/complex.cpp
 
 CMakeFiles/untitled1.dir/complex.cpp.i: cmake_force
@@ -132,7 +119,6 @@ CMakeFiles/untitled1.dir/complex.cpp.s: cmake_force
 # Object files for target untitled1
 untitled1_OBJECTS = \
 "CMakeFiles/untitled1.dir/main.cpp.o" \
-"CMakeFiles/untitled1.dir/test.cpp.o" \
 "CMakeFiles/untitled1.dir/rational.cpp.o" \
 "CMakeFiles/untitled1.dir/complex.cpp.o"
 
@@ -140,7 +126,6 @@ untitled1_OBJECTS = \
 untitled1_EXTERNAL_OBJECTS =
 
 untitled1: CMakeFiles/untitled1.dir/main.cpp.o
-untitled1: CMakeFiles/untitled1.dir/test.cpp.o
 untitled1: CMakeFiles/untitled1.dir/rational.cpp.o
 untitled1: CMakeFiles/untitled1.dir/complex.cpp.o
 untitled1: CMakeFiles/untitled1.dir/build.make
@@ -148,7 +133,7 @@ untitled1: lib/libgtestd.a
 untitled1: lib/libgtest_maind.a
 untitled1: lib/libgtestd.a
 untitled1: CMakeFiles/untitled1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sergejvanislavskij/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable untitled1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sergejvanislavskij/CLionProjects/untitled1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable untitled1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/untitled1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -7,7 +7,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/sergejvanislavskij/CLionProjects/untitled1/complex.cpp" "/Users/sergejvanislavskij/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/complex.cpp.o"
   "/Users/sergejvanislavskij/CLionProjects/untitled1/main.cpp" "/Users/sergejvanislavskij/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/main.cpp.o"
   "/Users/sergejvanislavskij/CLionProjects/untitled1/rational.cpp" "/Users/sergejvanislavskij/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/rational.cpp.o"
-  "/Users/sergejvanislavskij/CLionProjects/untitled1/test.cpp" "/Users/sergejvanislavskij/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
