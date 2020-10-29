@@ -43,27 +43,11 @@ public:
 
     rational operator+ (const rational& other) const;
 
-    rational operator+ (long long value) const;
-
-    rational operator+ (int value) const;
-
     rational operator- (const rational& other) const;
-
-    rational operator- (long long value) const;
-
-    rational operator- (int value) const;
 
     rational operator* (const rational& other) const;
 
-    rational operator* (long long value) const;
-
-    rational operator* (int value) const;
-
     rational operator/ (const rational& other) const;
-
-    rational operator/ (long long value) const;
-
-    rational operator/ (int value) const;
 
     bool operator==(const rational& other) const;
 

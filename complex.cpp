@@ -64,16 +64,8 @@ complex complex::operator+(const complex& other) const {
     return {real_part + other.real_part, imaginary_part + other.imaginary_part};
 }
 
-complex complex::operator+(int value) const {
-    return {real_part + value, imaginary_part};
-}
-
 complex complex::operator-(const complex& other) const {
     return {real_part - other.real_part, imaginary_part - other.imaginary_part};
-}
-
-complex complex::operator-(int value) const {
-    return {real_part - value, imaginary_part};
 }
 
 complex complex::operator*(const complex& other) const {
@@ -82,67 +74,31 @@ complex complex::operator*(const complex& other) const {
     return {r_part, im_part};
 }
 
-complex complex::operator*(int value) const {
-    return {real_part * value, imaginary_part * value};
-}
-
 complex complex::operator/(const complex& other) const {
     rational r_part = (real_part * other.real_part + imaginary_part * other.imaginary_part) / (other.real_part * other.real_part + other.imaginary_part * other.imaginary_part);
     rational im_part = (other.real_part * imaginary_part - other.imaginary_part * real_part) / (other.real_part * other.real_part + other.imaginary_part * other.imaginary_part);
     return {r_part, im_part};
 }
 
-complex complex::operator/(int value) {
-    return {real_part / value, imaginary_part / value};
-}
-
 complex& complex::operator+=(const complex& other) {
-    real_part = real_part + other.real_part;
-    imaginary_part = imaginary_part + other.imaginary_part;
+    *this = *this + other;
     return *this;
 }
 
-complex& complex::operator+=(int value) {
-    real_part = real_part + value;
-    return *this;
-}
 
 complex& complex::operator-=(const complex& other) {
-    this->real_part = this->real_part - other.real_part;
-    this->imaginary_part = this->imaginary_part - other.imaginary_part;
-    return *this;
-}
-
-complex& complex::operator-=(int value) {
-    real_part = real_part - value;
+    *this = *this - other;
     return *this;
 }
 
 complex& complex::operator*=(const complex& other) {
-    rational r_part = real_part * other.real_part + imaginary_part * other.imaginary_part * -1;
-    rational im_part = imaginary_part * other.real_part + real_part * other.imaginary_part;
-    real_part = r_part;
-    imaginary_part = im_part;
+    *this = *this * other;
     return *this;
 }
 
-complex& complex::operator*=(int value) {
-    real_part = real_part * value;
-    imaginary_part = imaginary_part * value;
-    return *this;
-}
 
 complex& complex::operator/=(const complex& other) {
-    rational r_part = (real_part * other.real_part + imaginary_part * other.imaginary_part) / (other.real_part * other.real_part + other.imaginary_part * other.imaginary_part);
-    rational im_part = (other.real_part * imaginary_part - other.imaginary_part * real_part) / (other.real_part * other.real_part + other.imaginary_part * other.imaginary_part);
-    real_part = r_part;
-    imaginary_part = im_part;
-    return *this;
-}
-
-complex& complex::operator/=(int value) {
-    real_part = real_part / value;
-    imaginary_part = imaginary_part / value;
+    *this = *this / other;
     return *this;
 }
 

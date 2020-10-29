@@ -107,48 +107,16 @@ rational rational::operator+ (const rational& other) const {
     return {numerator * other.denominator + other.numerator * denominator, denominator * other.denominator};
 }
 
-rational rational::operator+ (long long value) const {
-    return {numerator + value * denominator , denominator};
-}
-
-rational rational::operator+ (int value) const {
-    return {numerator + value * denominator , denominator};
-}
-
 rational rational::operator- (const rational& other) const {
     return {numerator * other.denominator - other.numerator * denominator, denominator * other.denominator};
-}
-
-rational rational::operator- (long long value) const {
-    return {numerator - value * denominator , denominator};
-}
-
-rational rational::operator- (int value) const {
-    return {numerator - value * denominator , denominator};
 }
 
 rational rational::operator* (const rational& other) const {
     return {numerator * other.numerator, denominator * other.denominator};
 }
 
-rational rational::operator* (long long value) const {
-    return {numerator * value, denominator};
-}
-
-rational rational::operator* (int value) const {
-    return {numerator * value, denominator};
-}
-
 rational rational::operator/ (const rational& other) const {
     return {numerator * other.denominator, denominator * other.numerator};
-}
-
-rational rational::operator/ (long long value) const {
-    return {numerator, denominator * value};
-}
-
-rational rational::operator/ (int value) const {
-    return {numerator, denominator * value};
 }
 
 bool rational::operator==(const rational& other) const {

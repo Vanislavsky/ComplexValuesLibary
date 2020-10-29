@@ -39,35 +39,19 @@ public:
 
     complex operator+(const complex& other) const;
 
-    complex operator+(int value) const;
-
     complex operator-(const complex& other) const;
-
-    complex operator-(int value) const;
 
     complex operator*(const complex& other) const;
 
-    complex operator*(int value) const;
-
     complex operator/(const complex& other) const;
-
-    complex operator/(int value);
 
     complex& operator+=(const complex& other);
 
-    complex& operator+=(int value);
-
     complex& operator-=(const complex& other);
-
-    complex& operator-=(int value);
 
     complex& operator*=(const complex& other);
 
-    complex& operator*=(int value);
-
     complex& operator/=(const complex& other);
-
-    complex& operator/=(int value);
 
     bool operator==(const complex& other) const;
 
