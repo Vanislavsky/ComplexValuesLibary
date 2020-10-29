@@ -129,3 +129,12 @@ const complex pow(complex value, int n) {
         res *= value;
     return res;
 }
+
+const rational arg(complex value) {
+    auto res = arctan(value.get_imaginary_part(), value.get_real_part());
+    if(value.get_real_part().get_numerator() < 0 && value.get_imaginary_part().get_numerator() > 0)
+        res += M_PI;
+    if(value.get_real_part().get_numerator() < 0 && value.get_imaginary_part().get_numerator() < 0)
+        res -= M_PI;
+    return res;
+}

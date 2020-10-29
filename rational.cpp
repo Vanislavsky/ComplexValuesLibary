@@ -139,3 +139,9 @@ rational abs(rational value) {
         value.numerator = value.numerator * -1;
     return value;
 }
+
+double arctan(rational l_value, rational r_value) {
+    auto x_coord = l_value.get_numerator() / l_value.get_denomenator();
+    auto y_coord = r_value.get_numerator() / r_value.get_denomenator();
+    return atan2(x_coord, y_coord);
+}

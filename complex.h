@@ -56,9 +56,12 @@ public:
     bool operator==(const complex& other) const;
 
     friend std::ostream& operator<< (std::ostream &out, const complex &value);
+
     friend const complex abs(complex value);
+
     friend const complex pow(complex value, int n);
-    friend complex argv(complex value);
+
+    friend const rational arg(complex value);
 
 };
 

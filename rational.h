@@ -56,6 +56,8 @@ public:
     friend std::ostream& operator<< (std::ostream &out, const rational &value);
 
     friend rational abs(rational value);
+
+    friend double arctan(rational l_value, rational r_value);
 };
 
 

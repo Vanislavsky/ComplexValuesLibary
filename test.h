@@ -267,3 +267,9 @@ TEST (ComplexValueTest, pow) {
     ASSERT_TRUE(pow(a,2) == b);
 
 }
+
+TEST (ComplexValueTest, arg) {
+    complex a(12.0,56.0);
+    rational b(679851, 500000);
+    ASSERT_TRUE(arg(a) == b);
+}
