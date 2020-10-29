@@ -14,19 +14,19 @@ complex::complex(long long value): real_part{value}, imaginary_part{0} {}
 
 complex::complex(int value): real_part{value}, imaginary_part{0} {}
 
-rational complex::get_real_part() {
+rational complex::get_real_part() const {
     return real_part;
 }
 
-rational complex::get_imaginary_part() {
+rational complex::get_imaginary_part() const {
     return imaginary_part;
 }
 
-void complex::set_real_part(rational real_part) {
+void complex::set_real_part(const rational& real_part) {
     this->real_part = real_part;
 }
 
-void complex::set_imaginary_part(rational imaginary_part) {
+void complex::set_imaginary_part(const rational& imaginary_part) {
     this->imaginary_part = imaginary_part;
 }
 
@@ -159,10 +159,17 @@ std::ostream& operator<< (std::ostream &out, complex &value) {
     return out;
 }
 
-complex abs(complex value) {
+const complex abs(complex value) {
     if(value.real_part.get_numerator() < 0)
         value.real_part.set_numerator(value.real_part.get_numerator() * -1);
     if(value.imaginary_part.get_numerator() < 0)
         value.imaginary_part.set_numerator(value.imaginary_part.get_numerator() * -1);
     return value;
+}
+
+const complex pow(complex value, int n) {
+    auto res = value;
+    for(int i = 0; i < n-1; i++)
+        res *= value;
+    return res;
 }

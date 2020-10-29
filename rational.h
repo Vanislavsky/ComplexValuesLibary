@@ -25,9 +25,9 @@ public:
 
     rational(double value);
 
-    long long get_numerator();
+    long long get_numerator() const;
 
-    long long get_denomenator();
+    long long get_denomenator() const;
 
     void set_numerator(long long value);
 

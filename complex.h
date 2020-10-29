@@ -19,13 +19,13 @@ public:
 
     complex(int value);
 
-    rational get_real_part();
+    rational get_real_part() const;
 
-    rational get_imaginary_part();
+    rational get_imaginary_part() const;
 
-    void set_real_part(rational real_part);
+    void set_real_part(const rational& real_part);
 
-    void set_imaginary_part(rational imaginary_part);
+    void set_imaginary_part(const rational& imaginary_part);
 
     complex& operator=(const complex& other);
 
@@ -72,7 +72,9 @@ public:
     bool operator==(const complex& other) const;
 
     friend std::ostream& operator<< (std::ostream &out, const complex &value);
-    friend complex abs(complex value);
+    friend const complex abs(complex value);
+    friend const complex pow(complex value, int n);
+    friend complex argv(complex value);
 
 };
 

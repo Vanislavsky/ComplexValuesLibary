@@ -260,3 +260,10 @@ TEST (ComplexValueTest, Abs) {
         ASSERT_TRUE(b == abs(a));
     }
 }
+
+TEST (ComplexValueTest, pow) {
+    complex a(2,3);
+    complex b(-5, 12);
+    ASSERT_TRUE(pow(a,2) == b);
+
+}

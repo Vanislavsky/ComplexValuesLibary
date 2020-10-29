@@ -56,11 +56,11 @@ rational::rational(double value) {
     denominator /= divider;
 }
 
-long long rational::get_numerator() {
+long long rational::get_numerator() const {
     return numerator;
 }
 
-long long rational::get_denomenator() {
+long long rational::get_denomenator() const {
     return denominator;
 }
 
