@@ -6,7 +6,7 @@ complex::complex() {
     imaginary_part = 0;
 }
 
-complex::complex(rational real_part, rational imaginary_part): real_part{real_part}, imaginary_part{imaginary_part} {}
+complex::complex(const rational& real_part, const rational& imaginary_part): real_part{real_part}, imaginary_part{imaginary_part} {}
 
 complex::complex(double real_value, double im_value): real_part(real_value), imaginary_part(im_value) {}
 

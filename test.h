@@ -283,7 +283,7 @@ TEST (ComplexValueTest, cout) {
     }
 
     {
-        complex a(23.23, 56);
+        complex a(23.23, 56.0);
         fout << a << std::endl;
         fout << a.get_real_part().get_numerator() << std::endl;
         fout << a.get_real_part().get_denomenator() << std::endl;

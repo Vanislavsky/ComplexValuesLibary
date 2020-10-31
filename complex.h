@@ -11,7 +11,7 @@ private:
 public:
     complex();
 
-    complex(rational real_part, rational imaginary_part);
+    complex(const rational& real_part,const rational& imaginary_part);
 
     complex(double real_value, double im_value = 0);
 
