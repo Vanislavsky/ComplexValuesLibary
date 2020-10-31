@@ -8,11 +8,12 @@ complex::complex() {
 
 complex::complex(rational real_part, rational imaginary_part): real_part{real_part}, imaginary_part{imaginary_part} {}
 
-complex::complex(double value): real_part(value), imaginary_part(0) {}
+complex::complex(double real_value, double im_value): real_part(real_value), imaginary_part(im_value) {}
 
-complex::complex(long long value): real_part{value}, imaginary_part{0} {}
+complex::complex(long long real_value, long long im_value): real_part(real_value), imaginary_part(im_value) {}
 
-complex::complex(int value): real_part{value}, imaginary_part{0} {}
+
+complex::complex(int real_value, int im_value): real_part(real_value), imaginary_part(im_value) {}
 
 rational complex::get_real_part() const {
     return real_part;
@@ -109,7 +110,7 @@ bool complex::operator==(const complex& other) const {
         return false;
 }
 
-std::ostream& operator<< (std::ostream &out, complex &value) {
+std::ostream& operator<< (std::ostream &out, const complex &value) {
     auto digit = value.get_imaginary_part().get_numerator() >= 0 ? " + " : " - ";
     out << value.get_real_part() << digit << abs(value.get_imaginary_part()) << "*i";
     return out;

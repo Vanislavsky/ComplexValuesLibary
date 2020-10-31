@@ -5,11 +5,12 @@
 
 #ifndef UNTITLED1_TEST_H
 #define UNTITLED1_TEST_H
+
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
 #include "complex.h"
 #include "rational.h"
-#endif //UNTITLED1_TEST_H
+#include <fstream>
 
 TEST (ComplexValueTest, Sum) {
     {
@@ -273,3 +274,36 @@ TEST (ComplexValueTest, arg) {
     rational b(679851, 500000);
     ASSERT_TRUE(arg(a) == b);
 }
+
+TEST (ComplexValueTest, cout) {
+    std::ofstream fout("/Users/sergejvanislavskij/CLionProjects/untitled1/test.txt");
+    {
+        complex a = (long long)10.23;
+        fout << a << std::endl;
+    }
+
+    {
+        complex a(23.23, 56);
+        fout << a << std::endl;
+        fout << a.get_real_part().get_numerator() << std::endl;
+        fout << a.get_real_part().get_denomenator() << std::endl;
+    }
+
+    {
+        complex a(rational(10,20), rational(23,25));
+        fout << a << std::endl;
+        fout << a.get_real_part() << std::endl;
+        fout << a.get_imaginary_part() << std::endl;
+    }
+
+    {
+        complex a(rational(10,20), rational(3,4));
+        complex b;
+        b.set_real_part(5.5);
+        b.set_imaginary_part(7.6);
+        fout << a + b << std::endl;
+    }
+
+}
+
+#endif

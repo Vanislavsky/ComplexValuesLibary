@@ -13,11 +13,11 @@ public:
 
     complex(rational real_part, rational imaginary_part);
 
-    complex(double value);
+    complex(double real_value, double im_value = 0);
 
-    complex(long long value);
+    complex(long long real_value, long long im_value = 0);
 
-    complex(int value);
+    complex(int real_value, int im_value = 0);
 
     rational get_real_part() const;
 
